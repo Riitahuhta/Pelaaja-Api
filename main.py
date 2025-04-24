@@ -1,6 +1,16 @@
 from fastapi import FastAPI
+from contextlib import asynccontextmanager
+from DB.database import create_db
 
-app = FastAPI()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    print("Käynnistetään")
+
+    create_db()
+    yield
+    print("Lopetetaan")
+
+app = FastAPI(lifespan=lifespan)
 
 @app.get("/")
 async def root():
