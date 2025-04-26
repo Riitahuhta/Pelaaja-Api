@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
-from DB.database import create_db
+from db.database import create_db
+from routers import events, players
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -12,6 +13,5 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World Hello"}
+app.include_router(players.router)
+app.include_router(events.router)

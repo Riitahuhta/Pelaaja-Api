@@ -1,6 +1,6 @@
 from datetime import datetime
 from fastapi import HTTPException, status
-from .models import event, eventDb
+from db.models import event, eventDb
 
 events = []
 

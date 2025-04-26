@@ -1,5 +1,5 @@
 from fastapi import HTTPException, status
-from .models import pelaaja, pelaajaDb
+from db.models import pelaaja, pelaajaDb
 from sqlmodel import Session, select
 
 def create_players(session: Session, player: pelaaja):
@@ -26,4 +26,4 @@ def delete_player(session: Session, player_id: int):
         raise HTTPException(detail="Player not found", status_code=status.HTTP_404_NOT_FOUND)
     session.delete(p)
     session.commit()
-    return{"message": "Player {player_id} deleted"}
+    return{"message": f"Player id={p.id} deleted"}
