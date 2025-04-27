@@ -16,3 +16,8 @@ Pelaajat tallennetaan SQLite-tietokantaan ja eventit muistiin
 
 
 Tekoälyä käytin error koodien selventämiseen, kysymällä miksi asiaa ei voi tehdä tietyllä tavalla, vaikeiden selitysten selventämiseen sekä parin ongelma tilanteen ratkaisemiseen.
+
+**Huomioitavaa**
+DB ja Routers kansioden nimet on vaihdettu mutta se ei jostain syystä githubissa näy joten jos tulee ongelmia vaihda ne:
+DB -> db
+Routers -> routers
