@@ -19,5 +19,5 @@ Tekoälyä käytin error koodien selventämiseen, kysymällä miksi asiaa ei voi
 
 **Huomioitavaa**
  - DB ja Routers kansioden nimet on vaihdettu mutta se ei jostain syystä githubissa näy joten jos tulee ongelmia vaihda ne:
-    DB -> db
-    Routers -> routers
+    - DB -> db
+    - Routers -> routers
